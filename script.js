@@ -1,6 +1,4 @@
-
-
-    /*******************For Menu bar toggling****************/
+/*******************For Menu bar toggling****************/
     // For toggling the menu bar
     let menu_btn = document.querySelector('.menu-btn a');
     let nav_list = document.querySelector('.nav-lists');
@@ -43,8 +41,8 @@
     // Displaying the x button to close the menu and menu buttton
     let checkClassActive = ()=>{
         if(nav_list.classList.contains('active')){
-            menu_btn.innerHTML = 'X';
+            menu_btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
         }else{
-            menu_btn.innerHTML = 'M';
+            menu_btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
         }
     }
