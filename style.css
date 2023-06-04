@@ -1,0 +1,656 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Default Styles */
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.btn{
+    outline: none;
+    border: none;
+    background-color: var(--dark-red);
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 550;
+    border-radius: 6px;
+}
+img{
+    width: 20%;
+    height: 100%;
+}
+
+
+/* Defining reusable varibales */
+/* Main Theme Color is Red ,white and darkred */
+:root{
+    --main-color:rgb(196, 15, 24);
+    --white:#fff;
+    --black:#000;
+    --dark-red:rgb(39, 2, 4);
+    --dark-red-transparent:rgba(39, 2, 4, 0.781);
+    --light-bg:rgb(225, 203, 203);
+    --light-red:rgb(224, 67, 75);
+    --whitesmoke:whitesmoke;
+}
+
+/* Header Scetion */
+header{
+    height: 100vh;
+    transition: 0.7s;
+    max-width: 100%;
+}
+.header-cover{
+    position: relative;
+    background: url(./Images/bg4.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    min-width: 100%;
+    height: 100vh;
+}
+.navbar-container{
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* On scrolling changing its background color */
+.header-content .sticky{
+    background-color: var(--dark-red);
+}
+.logo-section a{
+    color: var(--main-color);
+    font-size: 22px;
+    position: relative;
+    font-style: italic;
+}
+.logo-section a span{
+    color: var(--white);
+}
+
+/* For creating an underline */
+.logo-section a::after{
+    content: '';
+    width: 31px;
+    left: 2px;
+    top: 99%;
+    margin-top: -3px;
+    border-radius: 120px;
+    position: absolute;
+    height: 2.2px;
+    background-color: var(--main-color);
+}
+.logo-section a::before{
+    content: '';
+    position: absolute;
+    width:80px;
+    left: 17.6%;
+    top:91.7%;
+    border-radius: 120px;
+    height: 2.5px;
+    background-color: var(--main-color);
+}
+
+.nav-lists{
+    display: flex;
+    justify-content: right;
+    width: 70%;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 60px;
+}
+.nav-lists li{
+    margin: 0px 35px;
+}
+.nav-lists li a{
+    color: var(--white);
+    position: relative;
+
+}
+.nav-lists li a::after{
+    display: none;
+    content: '';
+    height: 1px;
+    position: absolute;
+    background-color: #fff;
+    width: 60%;
+    transition: background 5s linear;
+}
+.nav-lists li a:hover::after{
+    display: block;
+    transform: scale(1);
+}
+.menu-btn{
+    display: none;
+}
+.header-container{
+    z-index: 0;
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color: var(--white);
+}
+.header-container .description{
+    width: 410px;
+    font-size: 21px;
+}
+.header-container .description span{
+    color: var(--main-color);
+    font-style: italic;
+    font-weight: bold;
+}
+.header-container .description::first-letter{
+    margin-left: 24px;
+}
+.header-container .explore-btn{
+    border: 1px solid var(--dark-red);
+    outline: none;
+    padding: 6px 12px ;
+    width: 38%;
+    margin-top: 12px;
+    background: transparent;
+    box-shadow: inset 0px 0px 18px 18px #dcd4d475;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.header-container .explore-btn a{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--dark-red);
+}
+
+.header-container .explore-btn:hover{
+    
+    box-shadow: inset 0px 0px 18px 18px #dcd4d475;
+}
+
+
+.inner-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* About us section */
+.about-section{
+    margin-top: 20px;
+    background-color:var(--light-bg);
+    padding: 28px;
+    
+}
+.about-box{
+    justify-content: space-between;
+    padding-left: 68px;
+}
+.section-container h2{
+    text-align: center;
+    padding-bottom: 18px;
+    font-size: 32px;
+    color: var(--dark-red);
+}
+.about-image{
+    margin-left: 120px;
+}
+.about-image img{
+    width:50%;
+    object-fit: cover;
+}
+.about-desc-section{
+    padding-left: 80px;
+}
+.about-desc-section .btn{
+    margin-top: 12px;
+}
+
+.about-desc-section .btn a{
+    color: var(--white);
+
+}
+/* Membership section */
+.plans-section{
+    background-color: var(--whitesmoke);
+    /* margin: 20px 0px; */
+    padding: 18px 0px 40px;
+}
+.plans-box{
+    margin-top: 12px;
+}
+.plan-box{
+    padding: 20px;
+    border-radius: 8px;
+    height: 230px;
+    cursor: pointer;
+    background-color: var(--light-bg);
+    box-shadow: 6px 6px 8px var(--dark-red);
+    transition: all 0.5s ease-in-out;
+}
+.plan-box:hover{
+    transform: scale(1.06);
+}
+.plan-box .plan-head .plan-name{
+    color: var(--main-color);
+    font-size: 20px;
+}
+.plan-box .plan-head .plan-duration{
+    color: var(--dark-red-transparent);
+    font-size: 12px;
+}
+.plan-box .plan-price{
+    font-size: 22px;
+    text-align: center;
+    color: var(--dark-red);
+    margin: 3px 0px;
+}
+.plan-box .plans-description{
+    font-size: 14px;
+}
+
+/* Training Scetion */
+.trainings-section{
+    margin: 20px 0px;
+}
+.training-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px 0px;
+    padding: 20px 0px;
+}
+.training img{
+    width: 50%;
+    object-fit: contain;
+    aspect-ratio: 1.5;
+    padding: 4px;
+}
+.training{
+    text-align: center;
+    color: var(--main-color);
+}
+
+/* Trainers Section */
+.trainer{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.trainers-section{
+    background-color: var(--light-bg);
+    padding: 40px ;
+}
+.trainer-box{
+    margin-top: 20px;
+}
+.image-overlay img{
+    width: 100%;
+    border-radius: 8px;
+    height: 300px;
+    overflow: hidden;
+}
+.image-overlay{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.image-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 12px;
+    display:flex;
+    flex-direction: column;
+    transform: translateY(100%);
+    transition: all 0.5s linear;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 20px;
+}
+.trainer-details h4{
+    font-size: 22px;
+    color: var(--whitesmoke);
+}
+.image-overlay:hover > .overlay{
+    transform: translateY(50%);
+    opacity: 0.7;
+    color: var(--white);
+    background-color: var(--dark-red-transparent);
+}
+
+/* Contact Section */
+.contact-section{
+    padding-top: 20px;
+    background-color: var(--dark-red);
+}
+.contact-section h2{
+    color: var(--light-bg);
+}
+.contact-section .inner-section{
+    display: grid;
+    grid-template-columns: 2fr 1.4fr;
+} 
+.contact-form{
+    padding: 12px 82px;
+}
+.contact-form div{
+    font-size: 16px;
+    font-weight: 550;
+    color: var(--light-bg);
+}
+
+
+.contact-form div input,textarea{
+    outline: none;
+    border:  1px solid var(--dark-red);
+    border-radius: 4px;
+    padding: 6px;
+    width: 100%;
+    margin: 6px 0px;
+    resize: none;
+    font-weight: 550;
+}
+.contact-form .submit-btn{
+    color: var(--whitesmoke);
+    width: 100%;
+    background-color: var(--main-color);
+    font-weight: 550;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.contact-details h3{
+    color: var(--main-color);
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.contact-details h5{
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--whitesmoke);
+}
+.contact-details h5 a{
+    color: var(--light-red);
+}
+/* Footer Section */
+.footer-container{
+    border-top: 0.3px solid var(--light-bg);
+    text-align: center;
+    padding: 12px;
+    background-color: var(--dark-red);
+    color: var(--light-bg);
+}
+
+
+/* **************For Mobile Devices************ */
+
+@media screen and (max-width:480px){
+    
+    /* Header Scetion */
+    .navbar-container{
+        width: 100vw;
+        padding: 0px;
+        align-items: end;
+        flex-direction: column;
+    }
+    
+    /* On scrolling changing its background color */
+    .header-content .sticky{
+        background:none;
+        height: 64px;
+    }
+    .logo-section{
+        width: 100%;
+        height: 70px;
+        display:flex;
+        justify-content: space-between;
+        background-color: var(--dark-red);
+        padding: 12px;
+        padding-left: 20px;
+    }
+    .logo-section a{
+        color: var(--main-color);
+        font-size: 18px;
+        position: relative;
+        font-style: italic;
+        line-height: 40px;
+    }
+    .logo-section a span{
+        color: var(--white);
+    }
+
+    /* For creating an underline */
+    .logo-section a::after{
+        content: '';
+        width: 28px;
+        left: 0px;
+        top: 96%;
+        margin-top: -3px;
+        border-radius: 120px;
+        position: absolute;
+        height: 1.5px;
+        background-color: var(--main-color);
+    }
+    .logo-section a::before{
+        content: '';
+        position: absolute;
+        width:68px;
+        left: 17.1%;
+        top:87.3%;
+        border-radius: 120px;
+        height: 1.5px;
+        background-color: var(--main-color);
+    }
+    
+    .menu-btn{
+        display: block;
+        margin-right: 28px;
+    }
+    .menu-btn a{
+        color: var(--white);
+        font-style: normal;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .menu-btn a::before{
+        content: '';
+        width: 0px;
+        position: absolute;
+        height: 0px;
+        background:none;
+    }
+    .menu-btn a::after{
+        content: '';
+        width: 0px;
+        position: absolute;
+        height: 0px;
+        background:none;
+        /* transition: all 1s linear; */
+    }
+
+    .nav-lists{
+        flex-direction: column;
+        align-items: flex-end;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--dark-red);
+        padding-right: 32px;
+        margin-right: 0px;
+        transform: translateY(-100%);
+        transition: all 0.5s linear;
+        z-index: -1;
+    }
+    .nav-lists li{
+        margin: 12px 35px;
+    }
+
+    /* Active Class to toggle the menu button */
+    .active{
+        transform: translateY(0%);
+    }
+
+
+    /* Header cover image */
+    
+    .header-cover{
+        background: url(./Images/bg4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(6px);
+        width: 100vw;
+        height: 100vh;
+    }
+    /* Header Container  */
+    .header-container{
+        z-index: 0;
+        position: absolute;
+        top: 55%;
+        left: 0%;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        color: var(--whitesmoke);
+        min-width: 100%;
+        padding-left: 28px;
+    }
+    .header-container .description{
+        width: 310px;
+        font-size: 14px;
+    }
+    .header-container .explore-btn a{
+        font-size: 14px;
+    }
+
+
+    /* Common inner container */
+    .inner-section{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    /* About us section */
+    .about-section{
+        padding: 16px;
+    }
+    .about-box{
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 2px;
+        flex-direction: column-reverse;
+    }
+    .section-container h2{
+        text-align: center;
+        padding-bottom: 18px;
+        font-size: 32px;
+        color: var(--dark-red);
+    }
+    .about-image{
+        width: 70%;
+    }
+    .about-desc-section{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    /* Membership section */
+    .plans-box{
+        margin-top: 12px;
+    }
+    .plan-box{
+        width: 70%;
+        margin: 12px 0px;
+    }
+    .plan-box .plan-head .plan-name{
+        font-size: 18px;
+    }
+    .plan-box .plan-head .plan-duration{
+        font-size: 12px;
+    }
+    .plan-box .plan-price{
+        font-size: 20px;
+    }
+    .plan-box .plans-description{
+        font-size: 13px;
+    }
+
+    
+    /* Trainers Section */
+    .trainer{
+        margin-top: 15px;
+        width: 70%;
+        height: 300px;
+    }
+    .image-overlay img{
+        height: 300px;
+    }
+    .trainer-details h4{
+        font-size: 20px;
+    }
+
+        
+    /* Contact Section */
+    .contact-section{
+        padding-top: 20px;
+        background-color: var(--dark-red);
+    }
+    .contact-section .inner-section{
+        display: flex;
+        flex-direction: column-reverse;
+    } 
+    .contact-form{
+        width: 100%;
+    }
+    .contact-form div{
+        font-size: 13px;
+    }
+    .contact-details{
+        margin-bottom: 12px;
+    }
+    .contact-details h3{
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+    .contact-details h5{
+        font-size: 13px;
+    }
+    /* Footer Section */
+    .footer-container{
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+}
