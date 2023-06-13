@@ -6,14 +6,16 @@
 
 ***
 
+
+
 ![Weather-app-demo](./Images/screenshot.jpg "My Weather App")
 
 
+##### I have hosted this Responsive Landing Page on **Netlify** 
 #### Click below to see the demo
 **[Live Preview](https://royal-fitness-club.netlify.app/  "Preview on Netlify")**
 
-##### I have hosted this Responsive Landing Page on **Netlify** 
-##### Note : All the images and names are used only for Educational and Learning Purpose
+> ##### **Note : All the images and names are used only for Educational and Learning Purpose**
 
 
 
