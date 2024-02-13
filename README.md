@@ -13,7 +13,7 @@
 
 ##### I have hosted this Responsive Landing Page on **Netlify** 
 #### Click below to see the demo
-**[Live Preview](https://royal-fitness-club.netlify.app/  "Preview on Netlify")**
+**[Live Preview](https://rfgym-landing-page.netlify.app/  "Preview on Netlify")**
 
 > ##### **Note : All the images and names are used only for Educational and Learning Purpose**
 
